@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> PNJ Character</title>
+</head>
+<body>
+  <script>
+   
+
+
+let personnage = { 
+ name:"manzi",
+ age:32,
+ car:"Mustang GT500",
+ items_to_give  : ["livre","telecommande","clé usb","chaise","ordinateur","tv","imprimante","jeux de societe","capote"],
+
+	
+ };
+ 
+            var x = Math.floor((Math.random() * 9) + 0);
+            
+        
+
+for(let key in personnage){ // boucle
+	console.log(typeof key); // affiche le type de key ici String
+	console.log( key ) // affiche chaque clé de mon objet 
+	console.log( personnage[key] ) // affiche chaque valeur 
+ 	
+}; 
+
+	console.log(personnage.items_to_give[x]);
+
+
+    
+    
+    </script>  
+
+
+</body>
+</html>

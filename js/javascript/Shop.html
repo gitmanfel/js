@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let objet={
+            nom:['epee','sceptre','hache','Bowandarrow'],
+            physic:[8,3,9,7],
+            magic:[2,10,3,4],
+            minlevel:[1,12,8,9],
+            available:[1,0,1,0],
+        }
+
+   
+    let Bowandarrow={
+        physic:'combat',
+        magic:'vking',
+        minlevel:5,
+        available:false,
+
+    }
+for(i=0;i<4;i++){
+   if(Boolean(objet.available[i])==false){
+       console.log(objet.nom[i]);
+   }
+}
+
+    
+
+    
+    </script>
+    
+</body>
+</html>

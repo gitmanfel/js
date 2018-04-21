@@ -1,0 +1,28 @@
+p {
+  background-color: red;
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  color: aqua;
+}
+
+.one {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+}
+
+.one p {
+  color: green;
+}
+
+.two {
+  width: 100px;
+  height: 100px;
+}
+/*# sourceMappingURL=main.css.map */

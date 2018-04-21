@@ -1,0 +1,2 @@
+[14-Feb-2018 14:15:13 Europe/Berlin] PHP Notice:  Use of undefined constant e_all - assumed 'e_all' in /var/www/html/cible.php on line 16
+[14-Feb-2018 14:16:21 Europe/Berlin] PHP Notice:  Use of undefined constant e_all - assumed 'e_all' in /var/www/html/cible.php on line 16

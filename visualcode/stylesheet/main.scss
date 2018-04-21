@@ -1,0 +1,35 @@
+@import "partial/_divone";
+$color:aqua;
+$color:green;
+@mixin box($c){
+    width: 100px;
+    height: 100px;
+    background-color: $c;
+}
+
+
+body{
+    background-color: green;
+    margin-left: 50PX;
+    margin-right: 50PX;
+    align-content: center;
+}
+h1{
+    color: $color;
+}
+.one{
+    @include box(green);
+    background-color:$color;
+    ;
+
+    p{
+        
+        color: green;
+        
+    }
+}
+
+.two{
+    @include box();
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math</title>
+</head>
+<body>
+
+<script>
+let x = Math.PI;            // Returns PI
+let y = Math.sqrt(16);      // Returns the square root of 16
+
+let little=[ 7, 5, -12, 6, 32, 18, 14, -2];
+let big=[-3, 9, 21, 36, 27, 54, 17, 35]
+let total=(little+big);
+let min=Math.min.apply(little);
+let max=Math.min.apply(big);
+
+function suitemin(suite){
+
+    return Math.min.apply(null,suite);
+}
+
+function suitemax(suite){
+
+     Math.max.apply(null,suite);
+}
+
+let lowest=suitemin(little);
+let biggest=suitemax(big);
+
+for (i=0;i<8;i++){
+    
+    let somme= little[i]+big[i];
+    console.log(somme);
+    
+}
+
+/*console.log(little.length);
+console.log(big.length);
+console.log(x); 
+console.log(little);
+console.log(big);
+console.log(total);
+
+console.log(lowest);
+console.log(biggest);*/
+
+
+
+
+
+</script>
+
+    
+</body>
+</html>
