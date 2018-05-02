@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 0 Cookie </title>
+</head>
+
+<style>
+#circle {
+    width: 100px;
+    height: 100px;
+    background:chocolate;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    }
+        </style>
+<body>
+    <button id="circle" onclick="add()"></button>
+ 
+<br><br>
+<p>You have no cookie yet</p>
+<button>> <a href="#" onclick="save()">Save</a></button>
+
+<button>> <a href="#" onclick="load()">Load</a></button>
+
+<button> <a href="#" onclick="multiple()"><span id="achatMultiplicateur">0</span> Multiplicateur <span id="prix"></span>p</a></button>
+<br><br>
+
+<p>Buy 1 Auto Clicker</p>
+<button><a href="#"onclick="buyAutoClick()"><img src=mouse-hover.png width="30px" height="40px"><span id="prixautoclicker"></span>p</a></button>
+<p id="costAutoClick">50 cookies</p>
+<p id="amountAutoClick">You own 0 Auto Clickers</p>
+
+<script>
+
+
+    let  cookiecount=0;
+    let autoClick=0;
+    let Multiplicateur=1;
+    let prix=50;
+    let prixautoclicker=200;
+    let achat=0;
+    let multautoclicker=0;
+
+
+
+   function update(){
+    document.getElementsByTagName('p')[0].innerHTML="you have "+cookiecount+" cookies";
+
+    // document.getElementById('text').innerText=cookiecount;
+    document.title=cookiecount+"cookies";
+    document.getElementById('amountAutoClick').innerHTML="You own"  + autoClick + "  AutoClickers";
+    //document.getElementById('costAutoClick').innerText=((autoClick)+50)+"cookies";
+
+    
+   }
+
+   function buyAutoClick(){
+       if(cookiecount>=prixautoclicker){
+           cookiecount-= prixautoclicker;
+           prixautoclicker*=2;
+           autoClick+=1;
+           setInterval(function(){cookiecount+=1;
+            document.getElementsByTagName('p')[0].innerHTML="you have "+cookiecount+" cookies";
+            }, 1000);
+          
+           update()
+
+           }else{
+               
+            alert('vous n\'avez pas assez des cookies');
+               
+               }
+console.log(cookiecount);
+
+       }
+
+
+
+
+function multiple () {
+    if (cookiecount>=prix){
+    Multiplicateur*=2 ;
+    cookiecount-=prix;
+    prix*=2;
+    achat+=1;
+     document.getElementsByTagName('p')[0].innerHTML="you have "+cookiecount+" cookies";
+     document.getElementById('prix').innerHTML=prix;
+     document.getElementById('achatMultiplicateur').innerHTML=achat;              
+
+    }
+}
+  
+
+
+
+   
+    function Multautoclicker(){
+
+        
+    }
+
+    setInterval(timer,1000)
+
+function add(){
+    cookiecount+=Multiplicateur;
+    document.getElementsByTagName('p')[0].innerHTML="you have "+cookiecount+" cookies";
+
+}
+    function save(){
+
+        localStorage.setItem("cookiecount",cookiecount);
+        localStorage.setItem("autoClick", autoClick);
+    }
+    function load(){
+        cookiecount=localStorage.getItem("cookiecount");
+        cookiecount=parseInt(cookiecount);
+        autoClick=localStorage.getItem("autoClick");
+        update()
+    }
+    </script>
+</body>
+</html>

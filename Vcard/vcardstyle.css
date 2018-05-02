@@ -1,0 +1,72 @@
+/*VCard_31012018
+BeCode lblue : #63C3D1
+BeCode dblue : #16232E
+#3388CC
+*/
+
+body {
+    background-color: #EBEBEB;
+    display: flex;
+    height: 100vh;
+    margin: 10px;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 250px;
+    margin: auto;
+    width: 45%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    padding: 40px;
+    border: 5px solid #63C3D1;
+    border-radius: 10px;
+    box-shadow: 2px 4px 3px black;
+    background-color: #FFFFFF;
+  }
+  .header {
+    height: 250px;
+  }
+  .id {
+  float: left;
+  }
+  .address {
+  float: none;
+  }
+  .photo {
+  float: right;
+  }
+  strong {
+    color: #16232E;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    letter-spacing: 0.125em;
+    text-transform: capitalize;
+    text-shadow: -1px -1px 1px white,
+                 0px 4px 1px rgba(0,0,0,0.5),
+                 4px 4px 5px rgba(0,0,0,0.7),
+                 0px 0px 7px rgba(0,0,0,0.4);
+  }
+  
+  h4 {
+    color: #3388DD;
+    font-family: 'Athiti', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.125em;
+    text-transform: lowercase;
+    font-style: italic;
+  }
+  
+  #icon {
+      width: 24px;
+  }
+  
+  #photo {
+      width: 240px;
+      border-radius: 5px 5px 5px 5px;
+      float: right;
+  }
+  
+  .card:hover {
+      box-shadow: 0 16px 32px 0 white;
+  }

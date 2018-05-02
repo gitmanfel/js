@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>Keyboard</title>
+</head>
+<body>
+  <div id="character">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+    nisi ut aliquip ex ea commodo consequat.
+  </div>
+
+  <div id="up">UP</div>
+  <div id="down">DOWN</div>
+  <div id="left">LEFT</div>
+  <div id="right">RIGHT</div>
+
+  <script>
+//EXERCICE1
+// Crée (en HTML) une DIV avec l'id "character"
+
+let diana=document.getElementById('character');  //variable pour l'id character
+let modifcouleur=function(event){   //déclaration de la fonction pour le changement de couleur
+  let color="";    //déclaration variable color, vide, car dépendra du chiffre
+    switch(event.key){
+      case "0":
+        color="#d50000";
+      break;
+      case "1":
+        color="#e91e63";
+      break;
+      case "2":
+        color="#aa00ff";
+      break;
+      case"3":
+        color="#5c6bc0";
+      break;
+      case"4":
+        color="#00bfa5";
+      break;
+      case"5":
+        color="#cddc39";
+      break;
+      case"6":
+        color="#ffeb3b";
+      break;
+      case"7":
+        color="#ffa726";
+      break;
+      case"8":
+        color="#bdbdbd";
+      break;
+      case"9":
+        color="#84ffff";
+      break;
+    };
+    diana.style.background=color;
+};
+window.addEventListener('keydown',modifcouleur);
+//EXERCICE2
+
+let up=document.getElementById('up')
+let down=document.getElementById('down')
+let left=document.getElementById('left')
+let right=document.getElementById('right')
+document.addEventListener("keydown", function(e) {
+    switch (e.keyCode) {
+    case 38:
+    up.classList.add("highlight");
+    break;
+    case 40 :
+    down.classList.add("highlight");
+    break;
+    case 37 :
+    left.classList.add("highlight");
+    break;
+    case 39 :
+    right.classList.add("highlight");
+    break;
+  }
+})
+document.addEventListener("keyup", function(e) {
+    switch (e.keyCode) {
+    case 38:
+    up.classList.remove("highlight");
+    break;
+    case 40 :
+    down.classList.remove("highlight");
+    break;
+    case 37 :
+    left.classList.remove("highlight");
+    break;
+    case 39 :
+    right.classList.remove("highlight");
+    break;
+  }
+})
+  </script>
+
+</body>
+</html>

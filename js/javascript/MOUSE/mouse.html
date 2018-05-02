@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>Mouse</title>
+</head>
+<body>
+  <div class="hoverMe">
+    DON'T WORRY
+  </div>
+
+  <div class="hoverMe">
+    JS C'EST CHAUD
+  </div>
+
+  <div class="hoverMe">
+    DON'T WORRY BE PATIENT
+  </div>
+
+  <div id="reset">
+    RESET
+  </div>
+
+  <!-- <div id="axe-x"> -->
+  X:<input type="text" id="axe-x">
+  <!-- </div> -->
+
+  <!-- <div id="axe-y"> -->
+  Y:<input type="text" id="axe-y">
+  <!-- </div> -->
+
+<script>
+/*EXERCICE1
+Crée (en HTML) 3 DIV possedant la même classe 'hoverMe'
+Faire disparaitre les divs quand l'on passe la souris dessus
+Tip : utiliser le mouseenter ou mouseover*/
+let hover=document.querySelectorAll('.hoverMe')
+  for(let i=0;i<hover.length;i++){
+   hover[i].addEventListener("mouseover",function(event){
+     event.target.style.visibility="hidden";
+     })
+  }
+//EXERCICE2
+//Crée (en HTML) une DIV avec une l'id "reset"
+let reset01 = document.querySelector('#reset');
+let hover01 = document.querySelectorAll('.hoverMe');
+reset01.onclick = () => {
+for (let i = hover01.length-1; i>=0;i--){
+    hover01[i].style.visibility= "visible";
+    hover01[i].classList.add("apparition");
+  }
+}
+
+</script>
+
+</body>
+</html>
